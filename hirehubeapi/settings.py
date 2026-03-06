@@ -40,7 +40,20 @@ INSTALLED_APPS = [
     'accounts',
     'rest_framework',
     'jobs',
+    'drf_yasg',
 ]
+
+# new added:
+SWAGGER_SETTINGS = {
+    'USE_SESSION_AUTH': False,
+    'SECURITY_DEFINITIONS': {
+        'Bearer': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header'
+        }
+    }
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
