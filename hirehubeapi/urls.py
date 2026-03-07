@@ -24,6 +24,7 @@ Including another URLconf
 #     path('jobs/', include('jobs.urls')),
 # ] 
 
+# register json data:
 # "title": "Django Developer",
 #   "description": "Need DRF developer",
 #   "company_name": "Tech Pvt Ltd"
@@ -34,7 +35,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 from rest_framework import permissions
-from drf_yasg.views import get_schema_view
+from drf_yasg.views import get_schema_view #pip install drf-yasg
 from drf_yasg import openapi
 
 schema_view = get_schema_view(
